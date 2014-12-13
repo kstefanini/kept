@@ -15,6 +15,10 @@ var DefaultContent = React.createClass({
     this.props.newItem("text")();
   },
 
+  handleClickNewCounter: function() {
+    this.props.newItem("counter")();
+  },
+
   handleClickNewTodo: function() {
     this.props.newItem("todo")();
   },
@@ -26,6 +30,7 @@ var DefaultContent = React.createClass({
         <p>Your list is currently empty.</p>
         <p>You can create
           a <a className="new-text" href="#" onClick={this.handleClickNewText}>Text</a>,
+          a <a className="new-counter" href="#" onClick={this.handleClickNewCounter}>Counter</a>,
           a <a className="new-todo" href="#" onClick={this.handleClickNewTodo}>Todo</a> or
           <Button bsStyle="success" bsSize="large"
                   onClick={this.handleClickLoadSamples}>Load samples</Button>.

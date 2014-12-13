@@ -18,5 +18,6 @@
     {"label": "Eat more cheese", "done": false},
     {"label": "See Eiffel Tower", "done": false},
     {"label": "MOAR CHEESE", "done": false}
-  ]}
+  ]},
+  {"id": 8, "type": "counter", "title": "Baguettes", "count": 2}
 ]

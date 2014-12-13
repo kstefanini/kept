@@ -15,6 +15,7 @@ var KeptMenuBar = React.createClass({
           <div>
             <ul className="nav navbar-nav">
               <li><a href="#" onClick={this.props.newItem("text")}>Text</a></li>
+              <li><a href="#" onClick={this.props.newItem("counter")}>Counter</a></li>
               <li><a href="#" onClick={this.props.newItem("todo")}>Todo</a></li>
               <li><a href="#" onClick={this.props.undo}>Undo</a></li>
               <li><a href="#" onClick={this.props.redo}>Redo</a></li>

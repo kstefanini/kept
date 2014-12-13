@@ -5,6 +5,7 @@
 var React = require("react");
 var GlyphiconLink = require("./GlyphiconLink");
 var KeptText = require("./text/KeptText");
+var KeptCounter = require("./counter/KeptCounter");
 var KeptTodo = require("./todo/KeptTodo");
 var Panel = require("react-bootstrap").Panel;
 
@@ -13,6 +14,10 @@ var KeptEntry = React.createClass({
   _components: {
     text: function(itemData) {
       return <KeptText data={itemData} />;
+    },
+
+    counter: function(itemData) {
+      return <KeptCounter data={itemData} update={this.props.update} />;
     },
 
     todo: function(itemData) {

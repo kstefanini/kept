@@ -6,6 +6,7 @@ var utils = require("../utils");
 var React = require("react");
 var UndoStack = require("../mixins/UndoStack");
 var KeptTextForm = require("./text/KeptTextForm");
+var KeptCounterForm = require("./counter/KeptCounterForm");
 var KeptTodoForm = require("./todo/KeptTodoForm");
 var KeptMenuBar = require("./KeptMenuBar");
 var KeptItems = require("./KeptItems");
@@ -39,6 +40,15 @@ var KeptApp = React.createClass({
     text: function(data) {
       return (
         <KeptTextForm resetForm={this.resetForm}
+                      create={this.create}
+                      update={this.update}
+                      data={data} />
+      );
+    },
+
+    counter: function(data) {
+      return (
+        <KeptCounterForm resetForm={this.resetForm}
                       create={this.create}
                       update={this.update}
                       data={data} />
